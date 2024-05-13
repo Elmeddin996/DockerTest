@@ -1,0 +1,57 @@
+﻿@model Order
+<div class="content">
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="m-0 font-weight-bold text-primary">Orders Chart</h5>
+                    <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> @Model.OrderItems.Count</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="chartLinePurple"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card card-chart">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-3 font-weight-bold text-primary">Categorie Plants Count</h6>
+                    
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i>
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i>
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-info"></i>
+                        </span> 
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-warning"></i>
+                        </span> 
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-error"></i>
+                        </span> 
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

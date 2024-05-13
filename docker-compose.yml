@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password@12345#"
+      MSSQL_PID: Developer
+    ports:
+      - "1434:1433"
+  proniaserverapp:
+    build: .
+    ports:
+      - "8080:80"
+      - "8081:443"
